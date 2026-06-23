@@ -1,0 +1,34 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+env/
+
+# Local secrets and runtime config
+.env
+.env.local
+*.local
+
+# Runtime data
+app/data/*.db
+output/
+
+# Frontend
+front/agent_front/node_modules/
+front/agent_front/dist/
+front/agent_front/.vite/
+
+# IDE / OS files
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
