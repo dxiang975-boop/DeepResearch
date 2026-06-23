@@ -1,8 +1,5 @@
 """LangGraph 节点执行模块。
 
-这个文件是多 Agent 工作流里最核心、也最重的业务文件。graph.py 只负责
-“节点怎么连”，而这里负责“每个节点具体做什么”。
-
 按执行链路理解本文件：
 
 1. intent_node：判断用户问题是简单直答还是深度研究。
@@ -15,8 +12,6 @@
 8. reflect_node：证据不足时生成 supplementary_queries，回到检索节点。
 9. write_node：根据 findings/source_index 输出最终 Markdown 报告。
 
-文件前半部分大多是辅助函数，用于解析 JSON、清洗证据、构造引用、
-渲染参考资料和执行附录；文件后半部分才是真正的 LangGraph 节点函数。
 """
 
 import json
@@ -32,12 +27,6 @@ from .tools import bocha_web_search_records, search_knowledge_base_records
 
 
 logger = logging.getLogger("mult_agents")
-
-
-# =========================
-# 日志与 Agent 调用通用工具
-# =========================
-
 
 ANSI = {
     "reset": "\033[0m",
