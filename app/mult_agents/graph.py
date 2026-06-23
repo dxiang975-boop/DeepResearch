@@ -1,20 +1,3 @@
-"""LangGraph 工作流编排模块。
-
-这个文件只负责定义“多 Agent 之间怎么流转”，不实现每个 Agent 的具体业务逻辑。
-
-你可以把它理解成整个 DeepResearch 项目的流程地图：
-
-    START
-      -> intent
-      -> direct_answer 或 plan
-      -> web_search + local_rag
-      -> deep_dive
-      -> analyze
-      -> reflect 或 write
-      -> END
-
-真正的节点实现放在 nodes.py；共享状态结构放在 state.py。
-"""
 
 import logging
 
