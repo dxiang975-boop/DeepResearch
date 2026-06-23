@@ -101,4 +101,25 @@ docker run -d --name deepresearch-postgres `
   -v deepresearch-postgres-data:/var/lib/postgresql/data `
   postgres:16
 ```
+### Milvus
 
+Milvus 用于本地知识库向量检索。启动 Milvus 后设置：
+
+```env
+ENABLE_MILVUS=true
+MILVUS_HOST=127.0.0.1
+MILVUS_PORT=19530
+MILVUS_COLLECTION=mult_agent_memory
+```
+
+本地文档入库脚本：
+
+```text
+app/mult_agents/rag/ingest.py
+```
+
+运行前需要把脚本中的 `INPUT_PATH` 改成你的本地文档路径，然后执行：
+
+```powershell
+python app\mult_agents\rag\ingest.py
+```
