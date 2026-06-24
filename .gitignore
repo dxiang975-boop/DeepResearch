@@ -1,0 +1,80 @@
+# Local secrets and environment files
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+build/
+*.egg-info/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Conda
+.conda/
+
+# Node / frontend
+node_modules/
+dist/
+front/agent_front/node_modules/
+front/agent_front/dist/
+
+# IDE / editor
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs and runtime output
+*.log
+logs/
+*.tmp
+*.temp
+resume_*_tmp.docx
+
+# Local databases and generated data
+*.db
+*.sqlite
+*.sqlite3
+
+# Docker / local service data if created inside workspace
+docker-data/
+milvus-data/
+postgres-data/
+minio-data/
+etcd-data/
+
+# Large local knowledge-base files are usually private.
+# Keep this ignored unless you intentionally want to publish sample docs.
+knowledge_base/
+app/mult_agents/rag/knowledge_base/
+
+# Model checkpoints and experiment artifacts
+checkpoints/
+outputs/
+runs/
+wandb/
+mlruns/
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.pkl
+*.joblib
