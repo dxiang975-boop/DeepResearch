@@ -1,4 +1,5 @@
 # DeepResearch Multi-Agent Assistant
+<img width="1912" height="922" alt="image" src="https://github.com/user-attachments/assets/b2864e76-1880-45c5-bc69-42be937af674" />
 
 ## 运行前准备
 
